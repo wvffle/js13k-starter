@@ -10,6 +10,7 @@
     "dev": "node build.mjs"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "chokidar": "^3.4.2",
     "clean-css": "^4.2.3",

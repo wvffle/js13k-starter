@@ -2,6 +2,7 @@ import pug from './pug.mjs'
 // import esbuild from 'esbuild'
 import { rollup } from 'rollup'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import json from '@rollup/plugin-json'
 import { promises as fs } from 'fs'
 import { minify } from 'terser'
 import preprocess from 'preprocess'
@@ -27,7 +28,8 @@ export default async (PRODUCTION) => {
       main: 'src/js/main.js'
     },
     plugins: [
-      nodeResolve()
+      nodeResolve(),
+      json()
     ]
   })
   
