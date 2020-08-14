@@ -1,2 +1,2 @@
-import ts from './tiny-canvas/sprite.mjs'
-ts()
+import { init } from 'kontra'
+const { canvas } = init('c')

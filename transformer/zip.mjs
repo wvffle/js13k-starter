@@ -8,8 +8,10 @@ export default async () => {
   zip.outputStream.pipe(createWriteStream(`${process.cwd()}/public/game-build.zip`))
     .on('close', async () => {
       const { size } = await fs.stat(`${process.cwd()}/public/game-build.zip`)
-      console.log(`Current game size: ${size} bytes`)
-      console.log(`${(size / 13312 * 100).toFixed(2) }% of total game size used`)
+
+      const color = size <= 13312 ? '\x1b[1;32m' : '\x1b[1;31m'
+      console.log(`${color}Current game size: ${size} bytes`)
+      console.log(`${color}${(size / 13312 * 100).toFixed(2) }% of total game size used`)
     })
 
   zip.end()

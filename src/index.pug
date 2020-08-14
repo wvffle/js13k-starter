@@ -4,15 +4,17 @@ html
     meta(charset='utf-8')
 
     if PRODUCTION
-      style!=css
+      if css
+        style!=css
     else
       link(rel='stylesheet', href='main.css')
 
   body
-    | hello
+    canvas#c
 
     if PRODUCTION
-      script!=js
+      if js
+        script!=js
     else
       script(src='main.js')
       script.
