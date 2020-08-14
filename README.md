@@ -3,10 +3,10 @@
 ## Building
 - development
 ```
-node build.mjs
+yarn dev
 ```
 
 - production
 ```
-NODE_ENV=production build.mjs
+yarn build
 ```

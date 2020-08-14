@@ -6,8 +6,8 @@
   "author": "Kasper Seweryn <github@wvffle.net>",
   "license": "MIT",
   "scripts": {
-    "build:dev": "esbuild --outdir=public --bundle src/js/main.js --target=es2019 --splitting --format=esm --sourcemap",
-    "build:prod": "esbuild --outdir=public --bundle src/js/main.js --target=es2019 --minify"
+    "build": "NODE_ENV=production node build.mjs",
+    "dev": "node build.mjs"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
