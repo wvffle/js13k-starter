@@ -1,4 +1,4 @@
-import { init, GameLoop, Text } from 'kontra'
+import { init, GameLoop, Text, initKeys, bindKeys } from 'kontra'
 import { author } from '../../package.json'
 const { canvas } = init('c')
 
