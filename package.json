@@ -1,0 +1,23 @@
+{
+  "name": "js13k-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wvffle/js13k-starter.git",
+  "author": "Kasper Seweryn <github@wvffle.net>",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "esbuild --outdir=public --bundle src/js/main.js --target=es2019 --splitting --format=esm --sourcemap",
+    "build:prod": "esbuild --outdir=public --bundle src/js/main.js --target=es2019 --minify"
+  },
+  "devDependencies": {
+    "chokidar": "^3.4.2",
+    "clean-css": "^4.2.3",
+    "esbuild": "^0.6.22",
+    "pug": "^3.0.0",
+    "stylus": "^0.54.8",
+    "terser": "^5.0.0",
+    "tiny-lr": "^1.1.1",
+    "yazl": "^2.5.1"
+  },
+  "dependencies": {}
+}
